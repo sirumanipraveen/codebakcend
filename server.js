@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json({ limit: '200kb' }));
 
-const PORT = 4000;
+const PORT =  process.env.PORT || 4000; 
 
 // Basic allowed languages & how to run them inside Docker
 const RUNTIMES = {
